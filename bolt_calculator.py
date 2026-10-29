@@ -144,7 +144,7 @@ with col2:
     bolt_grade = st.selectbox(
         "볼트 등급",
         options=["4.6", "8.8", "10.9", "12.9"],
-        index=2,
+        index=0,
     )
 
 bolt_count = st.number_input(
