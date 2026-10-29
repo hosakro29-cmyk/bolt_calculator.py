@@ -144,7 +144,7 @@ with col2:
     bolt_grade = st.selectbox(
         "볼트 등급",
         options=["4.6", "8.8", "10.9", "12.9"],
-        index=1,
+        index=2,
     )
 
 bolt_count = st.number_input(
@@ -190,18 +190,18 @@ with result_col1:
         "낱개 최소체결력",
         f"{single_minimum_force:.2f} kN",
     )
-
-    st.metric(
-        "전체 최소체결력",
-        f"{total_minimum_force:.2f} kN",
-    )
-
-with result_col2:
     st.metric(
         "낱개 일반체결토크",
         f"{single_normal_torque:.2f} N·m",
     )
+    
 
+with result_col2:
+    
+    st.metric(
+        "전체 최소체결력",
+        f"{total_minimum_force:.2f} kN",
+    )
     st.metric(
         "전체 일반체결토크",
         f"{total_normal_torque:.2f} N·m",
